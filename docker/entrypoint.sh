@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -f "vendor/autoload.php" ]; then
-    composer install
+    composer install --prefer-dist --no-dev -o
 fi
 
 if [ ! -f ".env" ]; then
