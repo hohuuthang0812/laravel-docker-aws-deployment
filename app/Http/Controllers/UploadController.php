@@ -13,7 +13,7 @@ class UploadController extends Controller
         $filePath = 'uploads/' . $fileName;
 
         $path = Storage::disk('s3')->put($filePath, file_get_contents($request->file));
-        $path = asset($filePath);
+        $path = Storage::url($filePath);
         return response()->json([
             'path' => $path,
             'msg' => 'success'
