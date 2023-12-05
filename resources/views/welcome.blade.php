@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="{{ Storage::url('uploads/4750617.jpg') }}" alt="">
+    <img src="{{ url('api') }}" alt="">
 </body>
 </html>
