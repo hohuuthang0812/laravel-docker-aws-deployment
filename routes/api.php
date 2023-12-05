@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return response()->json('success');
+    return Storage::response('uploads/4750617.jpg');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
